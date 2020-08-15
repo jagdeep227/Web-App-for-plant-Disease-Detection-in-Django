@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/jagdeep/website/farming/healthyvsunhealthy-0.001-2conv-basic.model"
+all_model_checkpoint_paths: "/home/jagdeep/website/farming/healthyvsunhealthy-0.001-2conv-basic.model"

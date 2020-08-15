@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+
+{% block title %}Register User{% endblock %}
+{% block register_active %}active{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block body %}
+<h2>{{title}}</h2>
+<form method="post" novalidate>
+    {% csrf_token %}
+      {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+          {% endfor %}
+      {% endif %}
+  
+      
+      {{ form|crispy }}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

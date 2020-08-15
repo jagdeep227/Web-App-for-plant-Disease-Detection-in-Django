@@ -1,0 +1,50 @@
+{% extends "home.html" %}
+{% block title %}Welcome {{name}}{% endblock %}
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class="parallax"></div>
+
+<div class="parallax-container">
+
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+   
+
+
+{% block body %}
+<div class="container p-3 my-3 bg-primary text-black" >
+
+ 
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <div class="row">
+  <div class="col-sm-12 col-md-6">
+    <div class="panel panel-default" >
+        <div class="panel-body">
+            <a class="w3-button w3-border w3-xlarge" href="{% url 'farming:delete_pics' %}">To delete all Images  </a>
+        </div>
+    </div>
+  </div>
+  </div>
+<br>
+<p1>{% for s in data%}
+      <p>Disease: {{s.disease}}</p>
+      <p>Treatment: {{s.suggestion}}</p>
+      <br>
+      <img src="{{s.photo.url}} "  /> 
+      <br><br>
+ {% endfor %} </p1>
+
+
+</div>
+
+
+{% endblock %}

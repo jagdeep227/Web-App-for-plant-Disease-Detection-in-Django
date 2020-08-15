@@ -1,0 +1,27 @@
+{% extends "home.html" %}
+
+{% block title %}RESULTS{% endblock %}
+
+
+{% block body %}
+
+<style>
+    a2 {
+      width: 100px;
+      padding: 0px;
+      border: 5px solid gray;
+      margin: 0;
+      color: #0e0d0d ;
+      font-size: 150%;
+      background-color: rgb(233, 238, 243);
+    }
+    </style>
+<div > 
+    <a2>DISEASE:  {{a.disease}} </a2>
+    <a2>SUGGESTION:  {{a.suggestion}} </a2>
+    <a2> {{acc}} </a2>
+
+    <br>
+    <img src="{{a.photo.url}}" />
+</div>
+{% endblock %}

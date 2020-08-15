@@ -1,0 +1,51 @@
+{% extends "home.html" %}
+{% block title %}Welcome {{name}}{% endblock %}
+
+{% block body %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<table class="w3-table-all w3-xxlarge">
+    <tr>
+        <th>Name </th>
+        <th>Email </th>
+        <th>Address </th>
+        <th>Age  </th>
+        <th>Profession </th>
+    </tr>
+    <tr>
+    <a>{% for s in details %}
+      <td>{{s.name}}</td>
+      <td>{{s.email}}</td>
+      <td>{{s.address}}</td>
+      <td>{{s.age}}</td>
+      <td>{{s.profession}}</td>
+    {%endfor%}</a>
+    </tr>
+    </table>
+    <div class="container-fluid">
+<br>
+<br>
+<br>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <body>
+                            <form >
+                                <a class="w3-button w3-border w3-xlarge" href="{% url 'farming:check_new2' %}">To Check a new Image  </a>
+                                <a class="w3-button w3-border w3-xlarge" href="{% url 'farming:check_old' %}">  To See previously checked Images  </a>
+    
+                            </form>
+                        </body>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+{% endblock %}

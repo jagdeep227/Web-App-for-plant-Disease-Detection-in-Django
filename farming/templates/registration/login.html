@@ -1,0 +1,19 @@
+{% extends "../home.html" %}
+{% block title %}Login{% endblock %}
+{% block login_active %}active{% endblock %}
+{% load crispy_forms_tags %}
+
+      
+{% block container %} 
+    <h1 class="text-center">Hotel Application</h1> 
+{% endblock %}
+
+
+{% block body %}
+    <h4 class="card-title">Log in to your account</h4>
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary btn-block">Log in</button>
+{% endblock %}
